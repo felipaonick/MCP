@@ -1,3 +1,9 @@
 [submodule "02_MCP_Servers/mcpdoc"]
 	path = 02_MCP_Servers/mcpdoc
 	url = https://github.com/langchain-ai/mcpdoc
+[submodule "mcp-servers"]
+	path = mcp-servers
+	url = https://github.com/modelcontextprotocol/quickstart-resources
+[submodule "01_Intro_MCP/mcp-servers"]
+	path = 01_Intro_MCP/mcp-servers
+	url = https://github.com/modelcontextprotocol/quickstart-resources
