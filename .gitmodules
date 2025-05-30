@@ -1,0 +1,3 @@
+[submodule "02_MCP_Servers/mcpdoc"]
+	path = 02_MCP_Servers/mcpdoc
+	url = https://github.com/langchain-ai/mcpdoc
