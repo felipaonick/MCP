@@ -30,10 +30,13 @@ async def main():
             agent = create_react_agent(model=llm, tools=tools)
 
             response = await agent.ainvoke({
-                "messages": [HumanMessage(content="What is 2 plus 2?")]
+                "messages": [HumanMessage(content="What is 54 + 2 * 3?")]
             })
             print(response['messages'][-1].content)
 
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+    import time
+    time.sleep(0.1)
