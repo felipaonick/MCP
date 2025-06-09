@@ -7,3 +7,6 @@
 [submodule "01_Intro_MCP/mcp-servers"]
 	path = 01_Intro_MCP/mcp-servers
 	url = https://github.com/modelcontextprotocol/quickstart-resources
+[submodule "05_SSE_Servers/playwright-mcp"]
+	path = 05_SSE_Servers/playwright-mcp
+	url = https://github.com/microsoft/playwright-mcp.git
