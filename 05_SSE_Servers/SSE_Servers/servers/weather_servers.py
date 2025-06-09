@@ -7,6 +7,7 @@ mcp = FastMCP("weather")
 @mcp.tool()
 async def get_westher(location: str) -> str:
     """Get the weather for location."""
+    print("This is a log from the SSE server")
     return "Hot as hell"
 
 
