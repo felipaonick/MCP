@@ -4,12 +4,12 @@
 
 🎯 Il video prosegue mostrando **come avviare e testare localmente più MCP server** e poi collegarli a un client Multi-MCP.
 
-### ⚙️ Server ZK
+### ⚙️ Server SSE
 
 ✅ È già stato implementato e può essere avviato con:
 
 ```bash
-python servers/zk.py
+python servers/weather_server.py
 ```
 
 🌍 Viene eseguito su **porta 8000**
@@ -19,7 +19,7 @@ python servers/zk.py
 🧮 Avviamo anche il **server per le operazioni matematiche**, già creato in precedenza:
 
 ```bash
-python servers/math.py
+python servers/math_server.py
 ```
 
 ---
@@ -29,7 +29,7 @@ python servers/math.py
 📄 Viene creato un nuovo file chiamato:
 
 ```python
-linkchain_client.py
+langchain_client.py
 ```
 
 👨‍💻 **Motivazione del nome:** perché implementa un **client LangChain che si collega a più MCP server contemporaneamente**.
@@ -80,7 +80,7 @@ asyncio.run(main())
 🧪 Eseguendo:
 
 ```bash
-python linkchain_client.py
+uv run langchain_client.py
 ```
 
 ✅ Il codice gira correttamente e stampa il messaggio.
@@ -92,9 +92,9 @@ python linkchain_client.py
 ```bash
 project/
 ├── servers/
-│   ├── zk.py        # ZK server (porta 8000)
-│   ├── math.py      # Server operazioni matematiche
-├── linkchain_client.py  # Client LangChain Multi-MCP
+│   ├── weather_server.py        # Weather server (porta 8000)
+│   ├── math_server.py      # Server operazioni matematiche
+├── langchain_client.py  # Client LangChain Multi-MCP
 ```
 
 ---
@@ -103,7 +103,7 @@ project/
 
 | Componente                    | Ruolo                                                          |
 | ----------------------------- | -------------------------------------------------------------- |
-| 🛰️ ZK Server                 | Server MCP che espone uno strumento su porta 8000              |
+| 🛰️ Weather Server            | Server MCP che espone uno strumento su porta 8000              |
 | ➗ Math Server                 | Server MCP per operazioni matematiche                          |
 | 🧠 LangChain Multi-MCP Client | Client intelligente che connette più server contemporaneamente |
 | 🔌 LLM + React Agent          | Combinazione LangChain per orchestrare le chiamate ai tool MCP |
