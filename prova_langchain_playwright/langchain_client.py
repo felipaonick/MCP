@@ -12,7 +12,12 @@ load_dotenv()
 
 # LLM da usare (puoi anche usare GPT-4o o altri)
 #llm = ChatOllama(model="qwen2.5:14b", temperature=0, base_url="http://localhost:11434/")
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatOpenAI(
+    model="meta-llama/llama-4-maverick", 
+    temperature=0, 
+    openai_api_base="https://openrouter.ai/api/v1",
+    openai_api_key="sk-or-v1-...."
+    )
 
 async def main():
     client = MultiServerMCPClient({
